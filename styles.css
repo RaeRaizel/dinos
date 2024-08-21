@@ -1,0 +1,205 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8f5e9;
+    color: #2e2e2e;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(to right, #6b9e34, #9ac835);
+    color: white;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-image: url('url-a-una-imagen-de-dinosaurios.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: header-slide-in 1.5s ease-out; /* Animación de deslizamiento para el encabezado */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Georgia', serif;
+    animation: text-fade-in 2s ease-out; /* Animación de desvanecimiento del texto */
+}
+
+header p {
+    font-size: 1.3em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    animation: text-fade-in 2.5s ease-out; /* Animación de desvanecimiento con un pequeño retraso */
+}
+
+/* Navegación */
+nav {
+    background-color: #4a7023;
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 4px solid #6b9e34;
+}
+
+nav a {
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Animación de transformación */
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #6b9e34;
+    color: #e8f5e9;
+    transform: scale(1.1); /* Escala de los enlaces al pasar el cursor */
+}
+
+/* Contenido */
+.content {
+    padding: 25px;
+    max-width: 1200px;
+    margin: 25px auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-image: url('url-a-una-textura-de-huellas.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    animation: content-fade-in 2s ease-out 0.5s forwards; /* Animación de desvanecimiento con retraso */
+}
+
+.section {
+    margin-bottom: 25px;
+    opacity: 0;
+    animation: section-slide-in 1.5s ease-out forwards; /* Animación de deslizamiento para las secciones */
+}
+
+.section:nth-child(odd) {
+    animation-delay: 0.5s; /* Retraso alternativo para las secciones impares */
+}
+
+.section:nth-child(even) {
+    animation-delay: 1s; /* Retraso alternativo para las secciones pares */
+}
+
+.section h2 {
+    color: #6b9e34;
+    font-family: 'Georgia', serif;
+}
+
+.section img {
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación de transformación de imágenes */
+}
+
+.section img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumento de la sombra */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4a7023;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'Georgia', serif;
+    opacity: 0;
+    animation: footer-fade-in 1.5s ease-out 1.5s forwards; /* Animación de desvanecimiento del pie de página */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+/* Animaciones */
+@keyframes header-slide-in {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes text-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes content-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes section-slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes footer-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    nav a {
+        padding: 12px;
+        font-size: 1.1em;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .section img {
+        margin-top: 20px;
+    }
+}
